@@ -1,0 +1,55 @@
+#N canvas 108 398 765 536 10;
+#X obj 226 139 until;
+#X msg 209 64 8;
+#X obj 213 189 t b f;
+#X msg 66 198 seed \$1;
+#X obj 67 76 r seed;
+#X floatatom 66 176 15 0 0 0 - - -, f 15;
+#X obj 185 258 / 100;
+#X obj 201 30 r masterbang;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-array 100 float 3;
+#A 0 0.42 0.19 0.1 0.12 0.46 0.71 0.76 0.78 0.83 0.82 0.62 0.19 0.51
+0.46 0.52 0.4 0.93 0.08 0.79 0.61 0.78 0.08 0.03 0.07 0.26 0.34 0.84
+0.13 0.28 0.66 0.52 0.2 0.71 0.31 0.82 0.73 0.64 0.42 0.71 0.2 0.58
+0.56 0.05 0.1 0.7 0.15 0.38 0.94 0.08 0 0.63 0.17 0.92 0.75 0.85 0.25
+0.81 0.38 0.96 0.57 0.94 0.7 0.46 0.46 0.32 0.82 0.21 0.17 0.05 0.61
+0.1 0.85 0.53 0.26 0.84 0.55 0.71 0.67 0.67 0.19 0.3 0.01 0.11 0.54
+0.03 0.15 0.64 0.21 0.87 0.21 0.53 0.65 0.29 0.96 0.49 0.11 0.43 0.37
+0.44 0.64;
+#X coords 0 1 100 0 200 140 1 0 0;
+#X restore 80 370 graph;
+#X obj 190 325 array set \$0-array;
+#X obj 185 235 random 100;
+#X obj 388 189 tabread \$0-array;
+#X obj 387 109 inlet;
+#X obj 388 243 outlet;
+#X floatatom 389 151 5 0 0 0 - - -, f 5;
+#X floatatom 388 220 5 0 0 0 - - -, f 5;
+#X obj 370 332 array size \$0-array;
+#X floatatom 373 309 5 0 0 0 - - -, f 5;
+#X obj 371 280 r numsteps;
+#X obj 232 102 i;
+#X obj 309 26 r numsteps;
+#X obj 215 161 ys.loopcounter 16;
+#X obj 68 101 * \$1;
+#X connect 0 0 21 0;
+#X connect 2 0 10 0;
+#X connect 2 1 9 1;
+#X connect 3 0 10 0;
+#X connect 4 0 22 0;
+#X connect 5 0 3 0;
+#X connect 6 0 9 0;
+#X connect 7 0 19 0;
+#X connect 10 0 6 0;
+#X connect 11 0 15 0;
+#X connect 12 0 14 0;
+#X connect 14 0 11 0;
+#X connect 15 0 13 0;
+#X connect 17 0 16 0;
+#X connect 18 0 17 0;
+#X connect 19 0 0 0;
+#X connect 20 0 19 1;
+#X connect 20 0 21 2;
+#X connect 21 0 2 0;
+#X connect 22 0 5 0;
