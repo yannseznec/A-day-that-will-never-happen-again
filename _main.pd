@@ -1,6 +1,6 @@
 #N canvas 141 185 463 559 10;
 #X obj 44 162 hsl 128 15 2 50 0 1 numsteps_playing numsteps_playing_rcv
-number_of_steps -2 8 1 12 -258113 -162280 -262144 2646 1;
+number_of_steps -2 8 1 12 -258113 -162280 -262144 595 1;
 #X obj 44 258 hsl 128 15 0 1 0 1 randomchance randomchance_rcv chance_of_playback
 -2 8 1 12 -258113 -162280 -262144 3780 1;
 #X obj 44 277 hsl 128 15 0 1 0 1 pitchrange pitchrange_rcv pitch_range
@@ -8,7 +8,7 @@ number_of_steps -2 8 1 12 -258113 -162280 -262144 2646 1;
 #X obj 41 55 tgl 15 0 playstop playstop_rcv Play_Stop 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 44 121 hsl 128 15 0 0.5 0 1 rate rate_rcv playback_rate -2 8
-1 12 -258113 -162280 -262144 496 1;
+1 12 -258113 -162280 -262144 12700 1;
 #X obj 44 315 hsl 128 15 0 1 0 1 reversechance reversechance_rcv chance_of_reverse
 -2 8 1 12 -258113 -162280 -262144 4052 1;
 #N canvas 688 25 628 693 guts 0;
@@ -262,7 +262,7 @@ again;
 #X connect 29 0 31 0;
 #X connect 31 0 30 0;
 #X restore 36 421 pd presets;
-#N canvas 352 69 1137 758 midi 1;
+#N canvas 783 72 1137 758 midi 1;
 #X floatatom 57 94 5 0 0 0 - - -;
 #X obj 74 140 s rate_rcv;
 #X obj 670 419 s pitchrange_rcv;
@@ -345,14 +345,8 @@ again;
 #X floatatom 261 23 5 0 0 0 - - -;
 #X obj 281 76 + 9;
 #X floatatom 443 19 5 0 0 0 - - -;
-#X obj 28 319 print rate;
-#X obj 133 327 print fade;
-#X obj 215 319 print steps;
-#X obj 293 311 print random;
 #X connect 0 0 1 0;
-#X connect 0 0 80 0;
 #X connect 3 0 4 0;
-#X connect 3 0 82 0;
 #X connect 7 0 10 0;
 #X connect 8 0 9 0;
 #X connect 9 0 7 0;
@@ -396,11 +390,9 @@ again;
 #X connect 51 0 52 0;
 #X connect 53 0 54 0;
 #X connect 55 0 58 0;
-#X connect 55 0 83 0;
 #X connect 56 0 25 0;
 #X connect 57 0 0 0;
 #X connect 59 0 60 0;
-#X connect 59 0 81 0;
 #X connect 61 0 76 0;
 #X connect 62 0 63 0;
 #X connect 63 0 64 0;
