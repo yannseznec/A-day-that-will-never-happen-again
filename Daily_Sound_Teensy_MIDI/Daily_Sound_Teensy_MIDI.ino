@@ -204,7 +204,7 @@ Serial.println(touch[0]);
 
     newVal[i] = analogRead(analogPins[i]);
 
-    if (abs(newVal[i] - currentVal[i])>3) {
+    if (abs(newVal[i] - currentVal[i])>1) {
 //normal
       usbMIDI.sendControlChange(analogPinsCC[i], newVal[i]>>3, channel); 
    //   MIDI.sendControlChange(analogPinsCC[i], newVal[i]>>3, channel); 
