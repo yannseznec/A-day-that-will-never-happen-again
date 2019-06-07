@@ -2,6 +2,15 @@
 A rhythm generator that changes every day built from sounds recorded in a single day.
 For more background about this instrument: http://www.impracticaldevices.com/volume-1/
 
+How does it work?
+There is a library of 123 sounds, each recorded on a single day in December 2018.
+Each day, the software selects a subset of 10 of these sounds to play, and creates a number of randomised tables of data.
+These tables are used to organise the 10 selected sound into a repeating loop, with various parameters controlling how they are played.
+The potentiometers control the playback speed of the sequence, the length of the playback of each sample, the length of the sequence, and "other".
+The "other" knob controls four semi-randomised parameters at once, each of these being in turn controlled by a graph drawn from random slopes that
+are reset each day. The parameters are the chance of the sound being played back at each step, the range of pitch shifting, the range of volume randomisation,
+and the chance of the sound being played in reverse.
+
 This instrument uses the following hardware:
 - Raspberry Pi 3 Model B
 - Mini RTC Module
