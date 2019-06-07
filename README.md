@@ -1,5 +1,6 @@
 # A-day-that-will-never-happen-again
-A rhythm generator that changes every day built from sounds recorded in a single day 
+A rhythm generator that changes every day built from sounds recorded in a single day.
+For more background about this instrument: http://www.impracticaldevices.com/volume-1/
 
 This instrument uses the following hardware:
 - Raspberry Pi 3 Model B
@@ -26,7 +27,7 @@ https://thepihut.com/products/mini-rtc-module-for-raspberry-pi
 
 Teensy LC:
 This is used as a USB MIDI Controller, converting the four potentiometers and the switch into MIDI values sent via USB to the Raspberry Pi.
-It also converts MIDI note data from the Pi to turn the LED on when the patch is ready to make noise.
+It also converts MIDI note data from the Pi to turn the LED on when the patch is ready to make noise. The code for this is included in the repo.
 
 Potentiometers:
 I use 1kΩ linear potentiometers with solder lugs, each with a .1µf capacitor for smoothing. These are the ones:
