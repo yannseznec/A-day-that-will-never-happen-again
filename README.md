@@ -37,6 +37,9 @@ https://thepihut.com/products/mini-rtc-module-for-raspberry-pi
 Teensy LC:
 This is used as a USB MIDI Controller, converting the four potentiometers and the switch into MIDI values sent via USB to the Raspberry Pi.
 It also converts MIDI note data from the Pi to turn the LED on when the patch is ready to make noise. The code for this is included in the repo.
+Using a USB MIDI Controller with a Raspberry Pi used to be quite simple but for reasons I can not work out this has become oddly complicated.
+I used a system developed by the folks over at Blokas, which involves installing an autoconnect utility on the Pi, as described here: 
+https://community.blokas.io/t/script-for-launching-pd-patch-with-midi-without-aconnect/1010
 
 Potentiometers:
 I use 1kΩ linear potentiometers with solder lugs, each with a .1µf capacitor for smoothing. These are the ones:
