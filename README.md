@@ -1,4 +1,4 @@
-# A-day-that-will-never-happen-again
+# A Day That Will Never Happen Again
 A rhythm generator that changes every day built from sounds recorded in a single day.
 For more background about this instrument: http://www.impracticaldevices.com/volume-1/
 
