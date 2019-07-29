@@ -1,16 +1,16 @@
 #N canvas 141 185 463 559 10;
 #X obj 44 162 hsl 128 15 2 50 0 1 numsteps_playing numsteps_playing_rcv
-number_of_steps -2 8 1 12 -258113 -162280 -262144 8401 1;
+number_of_steps -2 8 1 12 -258113 -162280 -262144 8646 1;
 #X obj 44 258 hsl 128 15 0 1 0 1 randomchance randomchance_rcv chance_of_playback
--2 8 1 12 -258113 -162280 -262144 973 1;
+-2 8 1 12 -258113 -162280 -262144 5387 1;
 #X obj 44 277 hsl 128 15 0 1 0 1 pitchrange pitchrange_rcv pitch_range
--2 8 1 12 -258113 -162280 -262144 7361 1;
+-2 8 1 12 -258113 -162280 -262144 8496 1;
 #X obj 41 55 tgl 15 0 playstop playstop_rcv Play_Stop 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 44 121 hsl 128 15 0 0.5 0 1 rate rate_rcv playback_rate -2 8
-1 12 -258113 -162280 -262144 12700 1;
+1 12 -258113 -162280 -262144 0 1;
 #X obj 44 315 hsl 128 15 0 1 0 1 reversechance reversechance_rcv chance_of_reverse
--2 8 1 12 -258113 -162280 -262144 6368 1;
+-2 8 1 12 -258113 -162280 -262144 7274 1;
 #N canvas 688 25 628 693 guts 1;
 #X obj 28 25 ys.audiomidisetup;
 #X obj 46 343 *~;
@@ -164,6 +164,10 @@ again;
 #X obj 35 119 clone ys.agency 10;
 #X obj 500 534 s dsp_on_bang;
 #X obj 500 502 delay 100;
+#X obj 216 576 writesf~ 2;
+#X msg 305 540 open record.wav;
+#X msg 303 482 start;
+#X msg 308 508 stop;
 #X connect 1 0 17 0;
 #X connect 2 0 1 1;
 #X connect 2 0 19 1;
@@ -181,19 +185,24 @@ again;
 #X connect 15 0 16 0;
 #X connect 16 0 14 0;
 #X connect 18 0 12 0;
+#X connect 18 0 30 0;
 #X connect 19 0 20 0;
 #X connect 21 0 12 1;
+#X connect 21 0 30 1;
 #X connect 22 0 2 0;
 #X connect 25 0 11 0;
 #X connect 26 0 27 0;
 #X connect 27 0 1 0;
 #X connect 27 1 19 0;
 #X connect 29 0 28 0;
+#X connect 31 0 30 0;
+#X connect 32 0 30 0;
+#X connect 33 0 30 0;
 #X restore 36 394 pd guts;
 #X obj 43 86 hsl 128 15 0 1 0 0 empty location_view timing -2 8 1 12
--203904 -204800 -1 0 1;
+-203904 -204800 -1 6077 1;
 #X obj 44 141 hsl 128 15 0 1 0 1 fadeout fadeout_rcv fadeout -2 8 1
-12 -258113 -262144 -262144 8300 0;
+12 -258113 -262144 -262144 6300 0;
 #N canvas 532 466 947 359 presets 0;
 #X obj 78 114 s randomchance_rcv;
 #X msg 74 73 65;
@@ -266,7 +275,7 @@ again;
 #X connect 29 0 31 0;
 #X connect 31 0 30 0;
 #X restore 36 421 pd presets;
-#N canvas 466 127 879 592 midi 1;
+#N canvas 466 127 879 592 midi 0;
 #X floatatom 57 94 5 0 0 0 - - -;
 #X obj 74 140 s rate_rcv;
 #X obj 672 421 s pitchrange_rcv;
@@ -293,7 +302,7 @@ again;
 #X obj 85 417 delay 5000;
 #X obj 418 422 s volume_rand_rcv;
 #X obj 480 206 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7600 1;
+-1 -1 8900 1;
 #X obj 379 29 ctlin 5;
 #X obj 524 169 r randomiser;
 #X obj 74 73 / 256;
@@ -366,17 +375,17 @@ again;
 #X connect 47 0 16 0;
 #X connect 48 0 28 0;
 #X restore 36 445 pd midi;
-#X msg 39 32 today is 5/6/2019 and today will never happen again;
+#X msg 39 32 today is 27/7/2019 and today will never happen again;
 #X obj 39 9 r title;
 #X msg 345 362 audio-properties;
 #X obj 345 400 s pd;
 #X msg 216 366 midi-properties;
 #X obj 44 296 hsl 128 15 0 1 0 1 volume_rand volume_rand_rcv volume_randomise
--2 8 1 12 -258113 -162280 -262144 5080 1;
+-2 8 1 12 -258113 -162280 -262144 6268 1;
 #X obj 38 470 bng 15 250 50 0 reset_all_rcv empty reset_all 17 7 0
 10 -262144 -1 -1;
 #X obj 44 181 hsl 128 15 0 127 0 1 randomiser randomiser_rcv randomiser
--2 8 1 12 -258113 -162280 -262144 7600 1;
+-2 8 1 12 -258113 -162280 -262144 8900 1;
 #X connect 12 0 11 0;
 #X connect 13 0 14 0;
 #X connect 15 0 14 0;
