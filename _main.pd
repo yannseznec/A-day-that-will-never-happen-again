@@ -8,7 +8,7 @@ number_of_steps -2 8 1 12 -258113 -162280 -262144 2646 1;
 #X obj 41 55 tgl 15 0 playstop playstop_rcv Play_Stop 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 44 121 hsl 128 15 0 1 0 1 rate rate_rcv playback_rate -2 8 1
-12 -258113 -162280 -262144 10492 1;
+12 -258113 -162280 -262144 3175 1;
 #X obj 44 315 hsl 128 15 0 1 0 1 reversechance reversechance_rcv chance_of_reverse
 -2 8 1 12 -258113 -162280 -262144 3651 1;
 #N canvas 61 31 818 680 guts 0;
@@ -342,7 +342,8 @@ again;
 #X connect 32 0 13 0;
 #X connect 33 0 22 0;
 #X restore 36 445 pd midi;
-#X msg 39 32 today is 24/9/2020 and today will never happen again;
+#X msg 39 32 today is 27/10/2020 and today will never happen again
+;
 #X obj 39 9 r title;
 #X msg 345 362 audio-properties;
 #X obj 345 400 s pd;
@@ -353,7 +354,7 @@ again;
 10 -262144 -1 -1;
 #X obj 44 181 hsl 128 15 0 1023 0 1 randomiser randomiser_rcv randomiser
 -2 8 1 12 -258113 -162280 -262144 8020 1;
-#N canvas 257 211 951 765 serial 0;
+#N canvas 257 113 951 765 serial 1;
 #X obj 51 529 s rate_rcv;
 #X floatatom 262 536 5 0 0 0 - - -;
 #X obj 264 564 s numsteps_playing_rcv;
@@ -406,6 +407,7 @@ again;
 #X connect 12 0 38 0;
 #X connect 13 0 38 0;
 #X connect 14 0 32 0;
+#X connect 14 0 37 0;
 #X connect 15 0 7 0;
 #X connect 16 0 11 0;
 #X connect 17 0 38 0;
