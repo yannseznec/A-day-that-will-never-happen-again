@@ -2,15 +2,15 @@
 #X obj 44 162 hsl 128 15 2 50 0 1 numsteps_playing numsteps_playing_rcv
 number_of_steps -2 8 1 12 -258113 -162280 -262144 2646 1;
 #X obj 44 258 hsl 128 15 0 1 0 1 randomchance randomchance_rcv chance_of_playback
--2 8 1 12 -258113 -162280 -262144 3891 1;
+-2 8 1 12 -258113 -162280 -262144 3651 1;
 #X obj 44 277 hsl 128 15 0 1 0 1 pitchrange pitchrange_rcv pitch_range
--2 8 1 12 -258113 -162280 -262144 3891 1;
+-2 8 1 12 -258113 -162280 -262144 3651 1;
 #X obj 41 55 tgl 15 0 playstop playstop_rcv Play_Stop 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 44 121 hsl 128 15 0 1 0 1 rate rate_rcv playback_rate -2 8 1
-12 -258113 -162280 -262144 3175 1;
+12 -258113 -162280 -262144 10492 1;
 #X obj 44 315 hsl 128 15 0 1 0 1 reversechance reversechance_rcv chance_of_reverse
--2 8 1 12 -258113 -162280 -262144 3891 1;
+-2 8 1 12 -258113 -162280 -262144 3651 1;
 #N canvas 61 31 818 680 guts 0;
 #X obj 28 25 ys.audiomidisetup;
 #X obj 46 343 *~;
@@ -97,7 +97,7 @@ number_of_steps -2 8 1 12 -258113 -162280 -262144 2646 1;
 #X connect 25 0 26 0;
 #X connect 26 0 27 0;
 #X restore 69 456 pd clocking;
-#N canvas 697 302 707 446 dateseed 1;
+#N canvas 697 302 707 446 dateseed 0;
 #X msg 43 63 bang;
 #X floatatom 39 128 0 0 0 0 - - -;
 #X floatatom 138 123 0 0 0 0 - - -;
@@ -197,9 +197,9 @@ again;
 #X connect 33 0 30 0;
 #X restore 36 394 pd guts;
 #X obj 43 86 hsl 128 15 0 12 0 0 empty location_view timing -2 8 1
-12 -203904 -204800 -1 2117 1;
+12 -203904 -204800 -1 0 1;
 #X obj 44 141 hsl 128 15 0 1 0 1 fadeout fadeout_rcv fadeout -2 8 1
-12 -258113 -262144 -262144 385 0;
+12 -258113 -262144 -262144 12117 0;
 #N canvas 457 465 947 359 presets 0;
 #X obj 78 114 s randomchance_rcv;
 #X msg 74 73 65;
@@ -342,18 +342,18 @@ again;
 #X connect 32 0 13 0;
 #X connect 33 0 22 0;
 #X restore 36 445 pd midi;
-#X msg 39 32 today is 15/7/2020 and today will never happen again;
+#X msg 39 32 today is 24/9/2020 and today will never happen again;
 #X obj 39 9 r title;
 #X msg 345 362 audio-properties;
 #X obj 345 400 s pd;
 #X msg 216 366 midi-properties;
 #X obj 44 296 hsl 128 15 0 1 0 1 volume_rand volume_rand_rcv volume_randomise
--2 8 1 12 -258113 -162280 -262144 3891 1;
+-2 8 1 12 -258113 -162280 -262144 3651 1;
 #X obj 39 473 bng 15 250 50 0 reset_all_rcv empty reset_all 17 7 0
 10 -262144 -1 -1;
 #X obj 44 181 hsl 128 15 0 1023 0 1 randomiser randomiser_rcv randomiser
 -2 8 1 12 -258113 -162280 -262144 8020 1;
-#N canvas 43 23 951 765 serial 0;
+#N canvas 257 211 951 765 serial 0;
 #X obj 51 529 s rate_rcv;
 #X floatatom 262 536 5 0 0 0 - - -;
 #X obj 264 564 s numsteps_playing_rcv;
@@ -395,6 +395,7 @@ again;
 #X obj 313 92 r loop_light;
 #X obj 76 383 print;
 #X obj 44 179 comport 0 9600;
+#X msg 111 102 open 3;
 #X connect 1 0 2 0;
 #X connect 6 0 32 0;
 #X connect 7 0 30 0;
@@ -434,8 +435,9 @@ again;
 #X connect 35 0 25 0;
 #X connect 36 0 25 0;
 #X connect 38 0 26 0;
+#X connect 39 0 38 0;
 #X restore 89 445 pd serial;
-#N canvas 467 110 768 371 randomslopes 1;
+#N canvas 467 110 768 371 randomslopes 0;
 #X obj 484 461 s pitchrange_rcv;
 #X obj 109 461 s randomchance_rcv;
 #X obj 351 461 s reversechance_rcv;
