@@ -3,6 +3,7 @@
 
 const  int numAnalogs = 4;
 const  int numDigitals = 1;
+const int numDigitalOuts = 5;
 
 
   int newVal[numAnalogs];
@@ -67,15 +68,17 @@ for (int i = 0; i < numDigitals; i++) {
 }
 
 
+// turn the following into an array!!
+
 if (Serial.available() > 0) {
     // read the oldest byte in the serial buffer:
     fromPD = Serial.read();
     // if it's a capital H (ASCII 72), turn on the LED:
-    if (fromPD == 'H') {
+    if (fromPD == 10) {
       digitalWrite(13, HIGH);
     }
     // if it's an L (ASCII 76) turn off the LED:
-    if (fromPD == 'L') {
+    if (fromPD == 11) {
       digitalWrite(13, LOW);
     }
   }
