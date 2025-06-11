@@ -1,4 +1,4 @@
-#N canvas 855 31 585 569 10;
+#N canvas 819 31 585 569 10;
 #X obj 75 80 inlet;
 #X msg 119 178 seed \$1;
 #X obj 288 146 s \$0-urn;

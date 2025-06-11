@@ -1,16 +1,10 @@
 #N canvas 558 25 463 559 10;
-#X obj 44 162 hsl 128 15 2 50 0 1 numsteps_playing numsteps_playing_rcv
-number_of_steps -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 2778 1;
-#X obj 44 258 hsl 128 15 0 1 0 1 randomchance randomchance_rcv chance_of_playback
--2 8 1 12 #fc0400 #9c9c9c #fcfcfc 5354 1;
-#X obj 44 277 hsl 128 15 0 1 0 1 pitchrange pitchrange_rcv pitch_range
--2 8 1 12 #fc0400 #9c9c9c #fcfcfc 5354 1;
-#X obj 40 55 tgl 15 1 playstop playstop_rcv Play_Stop 17 7 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X obj 44 121 hsl 128 15 0 1 0 1 rate rate_rcv playback_rate -2 8 1
-12 #fc0400 #9c9c9c #fcfcfc 7900 1;
-#X obj 44 315 hsl 128 15 0 1 0 1 reversechance reversechance_rcv chance_of_reverse
--2 8 1 12 #fc0400 #9c9c9c #fcfcfc 5354 1;
+#X obj 44 162 hsl 128 15 2 50 0 1 numsteps_playing numsteps_playing_rcv number_of_steps -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 2699 1;
+#X obj 44 258 hsl 128 15 0 1 0 1 randomchance randomchance_rcv chance_of_playback -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 10846 1;
+#X obj 44 277 hsl 128 15 0 1 0 1 pitchrange pitchrange_rcv pitch_range -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 2934 1;
+#X obj 40 55 tgl 15 1 playstop playstop_rcv Play_Stop 17 7 0 10 #fcfcfc #000000 #000000 1 1;
+#X obj 44 121 hsl 128 15 0 1 0 1 rate rate_rcv playback_rate -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 9909 1;
+#X obj 44 315 hsl 128 15 0 1 0 1 reversechance reversechance_rcv chance_of_reverse -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 9851 1;
 #N canvas 61 31 818 680 guts 0;
 #X obj 28 25 ys.audiomidisetup;
 #X obj 46 343 *~;
@@ -26,8 +20,7 @@ number_of_steps -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 2778 1;
 #X obj 79 194 sel 0 1;
 #X obj 131 564 dac~;
 #X msg 408 495 \; pd dsp 1;
-#X obj 408 469 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 408 469 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 408 413 loadbang;
 #X obj 408 441 delay 1000;
 #X obj 50 391 throw~ audiooutL;
@@ -44,10 +37,8 @@ number_of_steps -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 2778 1;
 #X obj 184 538 s location_view;
 #X obj 183 516 spigot;
 #X obj 223 486 r playstop;
-#X obj 77 211 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 79 281 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 77 211 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 79 281 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 78 330 + 1;
 #X floatatom 76 363 5 0 0 0 - - - 0;
 #X msg 77 304 1;
@@ -62,8 +53,7 @@ number_of_steps -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 2778 1;
 #X obj 183 199 - 680;
 #X obj 161 105 * 600;
 #X obj 324 513 sel 0;
-#X obj 322 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 322 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X msg 343 611 1;
 #X msg 313 613 0;
 #X obj 327 662 change;
@@ -123,10 +113,8 @@ number_of_steps -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 2778 1;
 #X obj 307 277 pack 0 0 0;
 #X obj 314 351 print;
 #X obj 376 373 s title;
-#X msg 314 329 set today is \$3/\$2/\$1 and today will never happen
-again;
-#X obj 22 155 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X msg 314 329 set today is \$3/\$2/\$1 and today will never happen again;
+#X obj 22 155 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X connect 0 0 11 0;
 #X connect 1 0 4 0;
 #X connect 1 0 19 0;
@@ -196,10 +184,8 @@ again;
 #X connect 32 0 30 0;
 #X connect 33 0 30 0;
 #X restore 36 394 pd guts;
-#X obj 43 86 hsl 128 15 0 12.5 0 0 empty location_view timing -2 8
-1 12 #c4c4fc #c4fcfc #000000 0 1;
-#X obj 44 141 hsl 128 15 0 1 0 1 fadeout fadeout_rcv fadeout -2 8 1
-12 #fc0400 #fcfcfc #fcfcfc 11900 0;
+#X obj 43 86 hsl 128 15 0 12.2 0 0 empty location_view timing -2 8 1 12 #c4c4fc #c4fcfc #000000 0 1;
+#X obj 44 141 hsl 128 15 0 1 0 1 fadeout fadeout_rcv fadeout -2 8 1 12 #fc0400 #fcfcfc #fcfcfc 6493 0;
 #N canvas 457 465 947 359 presets 0;
 #X obj 78 114 s randomchance_rcv;
 #X msg 74 73 65;
@@ -230,8 +216,7 @@ again;
 #X msg 455 72 16;
 #X msg 155 61 0.25;
 #X msg 336 49 124;
-#X obj 444 14 bng 15 250 50 0 reset_all reset_all_rcv empty 17 7 0
-10 #fcfcfc #000000 #000000;
+#X obj 444 14 bng 15 250 50 0 reset_all reset_all_rcv empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 631 89 s fadeout_rcv;
 #X msg 623 59 0.6;
 #X connect 1 0 0 0;
@@ -272,7 +257,7 @@ again;
 #X connect 29 0 31 0;
 #X connect 31 0 30 0;
 #X restore 36 421 pd presets;
-#N canvas 9 140 879 592 midi 0;
+#N canvas 359 213 879 592 midi 0;
 #X floatatom 57 160 5 0 0 0 - - - 0;
 #X obj 74 206 s rate_rcv;
 #X floatatom 285 213 5 0 0 0 - - - 0;
@@ -290,8 +275,7 @@ again;
 #X obj 70 513 noteout;
 #X msg 71 487 60;
 #X msg 105 487 100;
-#X obj 81 452 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 81 452 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 81 381 loadbang;
 #X obj 85 417 delay 5000;
 #X obj 379 29 ctlin 5;
@@ -345,18 +329,15 @@ again;
 #X connect 36 0 37 0;
 #X connect 37 0 21 0;
 #X restore 36 445 pd midi;
-#X msg 39 32 today is 29/5/2023 and today will never happen again;
+#X msg 39 32 today is 11/6/2025 and today will never happen again;
 #X obj 39 9 r title;
 #X msg 345 362 audio-properties;
 #X obj 345 400 s pd;
 #X msg 216 366 midi-properties;
-#X obj 44 296 hsl 128 15 0 1 0 1 volume_rand volume_rand_rcv volume_randomise
--2 8 1 12 #fc0400 #9c9c9c #fcfcfc 5354 1;
-#X obj 39 473 bng 15 250 50 0 reset_all_rcv empty reset_all 17 7 0
-10 #fcfcfc #000000 #000000;
-#X obj 44 181 hsl 128 15 0 1023 0 1 randomiser randomiser_rcv randomiser
--2 8 1 12 #fc0400 #9c9c9c #fcfcfc 1552 1;
-#N canvas 257 107 951 765 serial 0;
+#X obj 44 296 hsl 128 15 0 1 0 1 volume_rand volume_rand_rcv volume_randomise -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 3975 1;
+#X obj 39 473 bng 15 250 50 0 reset_all_rcv empty reset_all 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 44 181 hsl 128 15 0 1023 0 1 randomiser randomiser_rcv randomiser -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 447 1;
+#N canvas 410 163 951 765 serial 0;
 #X obj 51 529 s rate_rcv;
 #X floatatom 262 536 5 0 0 0 - - - 0;
 #X obj 264 564 s numsteps_playing_rcv;
@@ -382,13 +363,11 @@ again;
 #X msg 223 135 72;
 #X msg 253 135 76;
 #X obj 223 112 sel 1 0;
-#X obj 246 79 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 246 79 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 44 201 serial_print any;
 #X obj 374 302 change;
 #X obj 374 323 sel 0;
-#X obj 371 348 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 371 348 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 136 482 / 1023;
 #X obj 259 511 + 2;
 #X obj 52 466 / 1024;
@@ -445,52 +424,54 @@ again;
 #X connect 38 0 26 0;
 #X connect 39 0 38 0;
 #X restore 89 445 pd serial;
-#N canvas 765 81 768 371 randomslopes 0;
+#N canvas 636 137 768 371 randomslopes 0;
 #X obj 484 461 s pitchrange_rcv;
 #X obj 109 461 s randomchance_rcv;
 #X obj 351 461 s reversechance_rcv;
 #X obj 230 462 s volume_rand_rcv;
-#X obj 50 43 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
+#X obj 50 43 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 94 5 r randomiser;
-#X msg 36 105 \$1 50;
-#X obj 36 126 line;
+#X obj 52 211 line;
 #X obj 106 402 ys.randomslopes 1;
 #X obj 225 401 ys.randomslopes 2;
 #X obj 348 401 ys.randomslopes 3;
 #X obj 481 408 ys.randomslopes 4;
 #X floatatom 44 9 5 0 0 0 - - - 0;
-#X obj 36 166 ys.random_tables 1;
-#X obj 157 164 ys.random_tables 2;
-#X obj 280 164 ys.random_tables 3;
-#X obj 396 162 ys.random_tables 4;
+#X obj 52 251 ys.random_tables 1;
+#X obj 173 249 ys.random_tables 2;
+#X obj 296 249 ys.random_tables 3;
+#X obj 412 247 ys.random_tables 4;
 #X text 132 361 old system (uses 0-44100);
-#X obj 419 251 s pitchrange_rcv;
-#X obj 44 251 s randomchance_rcv;
-#X obj 286 251 s reversechance_rcv;
-#X obj 165 252 s volume_rand_rcv;
-#X floatatom 109 75 5 0 0 0 - - - 0;
-#X floatatom 93 125 5 0 0 0 - - - 0;
-#X obj 36 63 / 127;
-#X connect 4 0 22 0;
-#X connect 4 0 24 0;
+#X obj 435 336 s pitchrange_rcv;
+#X obj 60 336 s randomchance_rcv;
+#X obj 302 336 s reversechance_rcv;
+#X obj 181 337 s volume_rand_rcv;
+#X floatatom 109 210 21 0 0 0 - - - 0;
+#X obj 52 148 / 1023;
+#X text 102 145 comment;
+#X msg 52 190 \$1 5;
+#X obj 48 106 + 1;
+#X floatatom 125 121 5 0 0 0 - - - 0;
+#X connect 4 0 25 0;
 #X connect 5 0 4 0;
-#X connect 6 0 7 0;
-#X connect 7 0 13 0;
-#X connect 7 0 23 0;
-#X connect 7 0 14 0;
-#X connect 7 0 15 0;
-#X connect 7 0 16 0;
-#X connect 8 0 1 0;
-#X connect 9 0 3 0;
-#X connect 10 0 2 0;
-#X connect 11 0 0 0;
-#X connect 12 0 4 0;
-#X connect 13 0 19 0;
-#X connect 14 0 21 0;
-#X connect 15 0 20 0;
-#X connect 16 0 18 0;
+#X connect 6 0 12 0;
+#X connect 6 0 21 0;
+#X connect 6 0 13 0;
+#X connect 6 0 14 0;
+#X connect 6 0 15 0;
+#X connect 7 0 1 0;
+#X connect 8 0 3 0;
+#X connect 9 0 2 0;
+#X connect 10 0 0 0;
+#X connect 11 0 4 0;
+#X connect 12 0 18 0;
+#X connect 13 0 20 0;
+#X connect 14 0 19 0;
+#X connect 15 0 17 0;
+#X connect 22 0 24 0;
 #X connect 24 0 6 0;
+#X connect 25 0 22 0;
+#X connect 25 0 26 0;
 #X restore 154 446 pd randomslopes;
 #X connect 12 0 11 0;
 #X connect 13 0 14 0;
