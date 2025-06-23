@@ -337,7 +337,7 @@
 #X obj 44 296 hsl 128 15 0 1 0 1 volume_rand volume_rand_rcv volume_randomise -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 10846 1;
 #X obj 39 473 bng 15 250 50 0 reset_all_rcv empty reset_all 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 44 181 hsl 128 15 0 1023 0 1 randomiser randomiser_rcv randomiser -2 8 1 12 #fc0400 #9c9c9c #fcfcfc 447 1;
-#N canvas 326 346 951 765 serial 1;
+#N canvas 332 107 951 765 serial 1;
 #X obj 51 529 s rate_rcv;
 #X floatatom 262 536 5 0 0 0 - - - 0;
 #X obj 264 564 s numsteps_playing_rcv;
@@ -392,7 +392,6 @@
 #X connect 13 0 42 0;
 #X connect 14 0 32 0;
 #X connect 15 0 7 0;
-#X connect 15 0 40 0;
 #X connect 16 0 11 0;
 #X connect 17 0 42 0;
 #X connect 18 0 33 0;
